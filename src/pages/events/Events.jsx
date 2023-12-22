@@ -11,14 +11,12 @@ import { Context } from "../../contexts/ContextFile"
 function Events() {
   const year=new Date()
   const [imagesTest, setImagesTest] = useState([])
-  const [offlineTrigger, setOfflineTrigger] = useState(false)
   const {setLengthOfUploads}=useContext(Context)
 
   
 
   useEffect(function(){
     if(navigator.onLine){
-      setOfflineTrigger(false)
       const imageRef=ref(storage,"images/")
       listAll(imageRef).then(function(response){
         setLengthOfUploads(response.items.length);
@@ -44,12 +42,7 @@ function Events() {
       ).catch(function(err){
         console.log("Error:",err);
       })
-    }else{
-      setOfflineTrigger(true)
-      setTimeout(function(){
-        setOfflineTrigger(false)
-      }, 5000);
-    }    
+    }   
   },[setLengthOfUploads])
 
   return (
