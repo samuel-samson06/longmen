@@ -76,7 +76,7 @@ function AdminHome() {
 
   return (
     <div className=" px-5 py-2 my-5 ">
-       <div className={`fixed top-2 left-1 transition-2000 transition-all ${deleted?' translate-x-0':' -translate-x-80'}`}>
+      <div className={`fixed top-2 left-1 transition-2000 transition-all ${deleted?' translate-x-0':' -translate-x-80'}`}>
           <Deleted deleting={deleting}/>
        </div>
        <div className={` fixed top-2 left-0 transition-2000 transition-all ${offlineTrigger?' translate-x-0':' -translate-x-80'}`}>
