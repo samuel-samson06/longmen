@@ -18,6 +18,11 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
+.testCSS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @keyframes moving {
     0%{
         transform: translateX(0%);
