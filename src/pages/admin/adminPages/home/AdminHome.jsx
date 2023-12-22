@@ -86,7 +86,7 @@ function AdminHome() {
       {imagesTest.length===0
           ?<p className=" text-center font-semibold text-lg">No File Uploaded</p>:
           <div className=" grid max-sm:flex max-sm:flex-col max-sm:items-center grid-cols-3 max-sm:gap-10  gap-6 ">
-            {imagesTest.slice(0,Math.round(imagesTest.length/2)).map(function(each,index){
+            {imagesTest.map(function(each,index){
             return(
               <div key={index} className=" max-sm:my-1 my-3">
                   <img src={`${each.imgUploaded}`} alt="Events" className="   max-[450px]:w-72   max-sm:w-72 max-sm:h-72 h-64 w-full" loading={'lazy'} />

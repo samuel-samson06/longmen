@@ -71,7 +71,7 @@ function Events() {
             <main>
               <p className=" underline text-center font-semibold font-serif text-3xl max-[420px]:text-xl">Recent Post&apos;s</p>
               <div className=" py-7 grid max-sm:flex max-sm:flex-col max-sm:items-center grid-cols-4 max-sm:gap-10  gap-6 ">
-              {imagesTest.slice(0,Math.round(imagesTest.length/2)).map(function(each,index){
+              {imagesTest.map(function(each,index){
               return(
                 <div key={index} className=" max-sm:my-1 my-3">
                     <img src={`${each.imgUploaded}`} alt="Events" className=" max-lg:w-[400px] max-lg:h-[400px] max-md:w-80 max-md:h-96 max-[420px]:w-60 max-[420px]:h-72 w-72 h-80" loading={'lazy'} />
