@@ -21,11 +21,12 @@ function AdminHome() {
       setDeleted(true)
       deleteObject(urlRef).then(function(){
         setDeleting("Deleted Successfully ")
-        navigate('/admin/adminHome')
-        location.reload()
         setTimeout(function(){
           setDeleted(false);
         },2000)
+        setTimeout(function(){
+          navigate('/admin')
+        },200)
       }).catch(function(err){
         console.error("ERR",err)
       })
