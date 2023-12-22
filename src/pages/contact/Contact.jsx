@@ -1,27 +1,23 @@
 import {BsInstagram} from "react-icons/bs"
 import { BiSolidPhoneCall} from "react-icons/bi"
 import {HiOutlineMail} from "react-icons/hi"
-// import { NavLink } from "react-router-dom"
 import { useContext, useEffect, useRef, useState } from "react"
 import { Context } from "../../contexts/ContextFile"
 import { useNavigate } from "react-router-dom"
 import emailjs from '@emailjs/browser';
-// import { validatePhoneNumber,validateEmail } from "../admin/javaScriptFolder/apiCalls"
-
 
 function Contact() {
   const year=new Date()
   const form =useRef()
   const navigate=useNavigate()
-  
   const {navBarTrigger}=useContext(Context)
-
   const [info,setInfo]=useState({
     name:'',
     phoneNumber:"",
     email:'',
     message:''
   })
+  const [btnText, setBtnText] = useState("Send Message")
   const [borderTrigger, setBorderTrigger] = useState(false)
   const {name,phoneNumber,email,message}=info
 
@@ -36,6 +32,14 @@ function Contact() {
     }
   },[borderTrigger])
 
+  useEffect(function(){
+    if(name.toLowerCase()==="longmen" && message.toLowerCase()==="longmen123"){
+      setBtnText("Login")
+    }else{
+      setBtnText("Send Message")
+    }
+
+  },[name,message])
 
   function handleChange(e){
     setInfo({
@@ -78,7 +82,6 @@ function Contact() {
           <main className=" sm:items-center sm:text-lg sm:gap-10 gap-5 flex flex-col justify-center  py-3 absolute bg-black bg-opacity-80 h-[100%] w-[100%]">
             <p className=" max-[420px]:text-2xl font-semibold text-center  text-4xl font-sans">Contact Us</p>
             <div className=" px-5">
-              {/* <p className=" max-[420px]:text-sm">Contact Us Through The following</p> */}
               <section className=" ">
                 <div>
                   <div className=" flex items-center gap-5">
@@ -106,11 +109,10 @@ function Contact() {
             <input onChange={handleChange} value={email} type={"email"} name="email"  className={`  py-2 px-2 mx-3 placeholder:font-semibold placeholder:text-gray-400 placeholder:text-opacity-70 outline-none bg-gray-200 border-b-2  ${borderTrigger&&email.length<=0?"border-red-500":'border-black'}`} placeholder=" Your e-mail" />
             <input onChange={handleChange} value={message} type={message.toLowerCase().trim()==="longmen123"?'password':'text'} name="message"  className={`  py-2 px-2 mx-3 placeholder:font-semibold placeholder:text-gray-400 placeholder:text-opacity-70 outline-none bg-gray-200 border-b-2  ${borderTrigger&&message.length<=0?"border-red-500":'border-black'}`} placeholder="Message" />
             <div className=" flex items-center justify-center">
-              <button onClick={handleSubmit} type="submit" className={" max-[420px]:text-base max-[420px]:w-40 text-lg w-56 bg-gray-600 py-2  text-white rounded font-semibold hover:shadow-xl transition-shadow"}>{name==="longmen"&&message==="longmen123"&&email.length===0&&phoneNumber.length===0?'Login':'Send Message'}</button>
+              <button onClick={handleSubmit} type="submit" className={" max-[420px]:text-base max-[420px]:w-40 text-lg w-56 bg-gray-600 py-2  text-white rounded font-semibold hover:shadow-xl transition-shadow"}>{btnText}</button>
             </div>
           </form>
         </div>
-      {/* <p className=" py-2 uppercase text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen cooperation &copy; {year.getFullYear()}</p> */}
       <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 uppercase text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen cooperation &copy; {year.getFullYear()}</p>
       </div>
     </>
