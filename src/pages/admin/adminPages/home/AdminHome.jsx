@@ -4,9 +4,10 @@ import {  useContext, useEffect, useState } from "react"
 import Offline from "../../../others/Offline"
 import Deleted from "../../../others/Deleted"
 import { Context } from "../../../../contexts/ContextFile"
+import { useNavigate } from "react-router-dom"
 
 function AdminHome() {
-
+  const navigate=useNavigate()
   const [imagesTest, setImagesTest] = useState([])
   const [offlineTrigger, setOfflineTrigger] = useState(false)
   const [deleted, setDeleted] = useState(false)
@@ -20,6 +21,7 @@ function AdminHome() {
       setDeleted(true)
       deleteObject(urlRef).then(function(){
         setDeleting("Deleted Successfully ")
+        navigate('/admin/adminHome')
         location.reload()
         setTimeout(function(){
           setDeleted(false);

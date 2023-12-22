@@ -82,9 +82,9 @@ function AdminUpload() {
         <div>
           {fileImage===''?<TiFolderOpen className=" text-5xl font-light "/>:<img src={fileImage} alt={fileImage} className=" h-48 rounded-md" />}
         </div>
-        <div className=" flex flex-col items-center testCss ">
+        <div className=" flex flex-col items-center justify-center text-center ">
           <p className=" max-[362px]:text-sm max-[432px]:text-sm font-[monospace] text-lg font-medium">Select the file you would like to upload</p><br />
-          <input onChange={handleImage} accept="image/*"  type="file"  name="" id="" className=" max-sm:file:mx-5 file:px-4 file:py-2 file:bg-gray-300 file:border-none file:rounded-md  file:mr-4 file:border-[1px]   file:p-1"/>
+          <input onChange={handleImage} accept="image/*"  type="file"  name="" id="" className=" flex flex-col items-center justify-center max-sm:file:mx-5 file:px-4 file:py-2 file:bg-gray-300 file:border-none file:rounded-md  file:mr-4 file:border-[1px]   file:p-1"/>
         </div>
         {uploading&& <div className=" font-semibold text-lg font-serif animate-pulse">Uploading...</div>}
       </div>
