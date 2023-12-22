@@ -38,8 +38,8 @@ function AdminProfile() {
               <p className="  max-md:text-base text-xl font-black">Number of Upload&apos;s ({lengthOfUploads})</p>
               <p className=" text-lg font-black max-md:text-base">Email: <span className=" font-medium font-sans text-base">a.samuelsamson@gmail.com</span></p>
               <article className=" m font-medium text-sm">A cigar is as good as memories that you have when you smoked it. And, you know, we just don&apos;t make memories with cigars, we make memories with our friends, with our family, with our loved ones. And, you know, that&apos;s what life is all about</article>
-              <button onClick={handleReturn} className=" bg-gray-700 text-white py-1 rounded font-semibold px-3 w-fit ">Logout</button>
-              <p className=" text-center font-black">Longmen &copy;</p>
+              <button onClick={handleReturn} className=" bg-gray-700 text-white text-lg max-sm:text-base py-1 rounded font-semibold px-3 w-fit ">Logout</button>
+              <p className=" text-center font-black ">Longmen &copy;</p>
             </main>
           </div>
         </section>
