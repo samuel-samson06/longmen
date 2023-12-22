@@ -1,27 +1,29 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import video from "../../long_men_images/lastLongmenEvent.mp4"
 import flyer from "../../long_men_images/lastEventFlyer.webp"
 // import longMen from "../../long_men_images/both.jpg"
 import el from "../../long_men_images/elvis.jpg"
 import lotana from "../../long_men_images/lotana.jpg"
 import art from "../../long_men_images/art.jpg"
+import { useContext } from "react"
+import { Context } from "../../contexts/ContextFile"
 
 
 function Home() {
   const year=new Date()
+  const {navBarTrigger}=useContext(Context)
 
   return (
     <>
       <div className="  border-t-2">
 
-        <div className=" -z-40 max-[420px]:h-[300px] max-[420px]:w-screen relative bg-[url(long_men_images/both.jpg)] bg-cover bg-center bg-no-repeat  h-[500px]">
+        <div className={` ${navBarTrigger?'-z-10':'z-10'} max-[420px]:h-[300px] max-[420px]:w-screen relative bg-[url(long_men_images/both.jpg)] bg-cover bg-center bg-no-repeat  h-[500px]`}>
           <main className=" max-[420px]:h-[300px] max-[420px]:w-screen  w-[100%] h-[100%] bg-opacity-70 text-white bg-black absolute flex items-center">
             <aside className=" max-[420px]:px-10 max-sm:px-32 max-[440px]:px-12 px-40">
               <p className=" max-[420px]:font-medium max-[420px]:text-2xl max-[440px]:text-3xl max-md:text-4xl text-7xl font-bold font-family">We Are <br /><span>Longmen!</span></p>
               <p className=" max-[420px]:font-normal max-[420px]:text-sm max-[440px]:text-[13px] max-md:text-lg text-xl font-medium  my-3 italic">Exclusive Lifestyle & Events, Strategic Brand Partnerships, Private Club Membership<span>& </span>Events <span className=" max-[420px]:text-base text-lg not-italic">Brand!</span></p>
-              <NavLink to={"/about"} className={" max-[420px]:text-base max-[420px]:font-normal max-sm:text-lg text-2xl bg-gray-800 text-white  py-1 px-2 rounded font-semibold"}>About →</NavLink>
+              <Link to={"about"} className={" max-[420px]:text-base max-[420px]:font-normal max-sm:text-lg text-2xl bg-gray-800 text-white  py-1 px-2 rounded font-semibold"}>About →</Link>
             </aside>
-             {/* <img src={longMen} className=" w-96 rounded-lg" /> * */}
           </main>
         </div>
         <div className="  py-5">

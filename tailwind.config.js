@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      
+      maxWidth:{
+        '430':'430px',
+        '400':'400px'
+      },
       fontFamily:{
         fontFamily:{
           gothicAi:["Gothic+A1","sans-serif"]

@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .a.active{
     color: rgb(231, 229, 229);
+}
+
+.act.active{
+    border-bottom: 1px gray solid ;
+}
+
+.animation{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes moving {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(300%);
+    }
 }

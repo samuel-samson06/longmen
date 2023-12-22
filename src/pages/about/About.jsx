@@ -19,9 +19,9 @@ function About() {
         <article className=" font-semibold py-4 px-8 border-b-2 border-black max-[420px]:text-sm max-[420px]:px-4 max-md:px-6">
           <ul>
             <li className=" max-md:py-4 max-[420px]:py-2 py-1">1.) Cigars: Our humidors house a curated selection of cigars – from earthy Nicaraguans to spicy Dominicans. Each cigar tells a tale of terroir, tradition, and taste. Whether you&apos;re a seasoned aficionado or a curious novice, our collection invites you to explore the nuances of tobacco leaves.</li>
-            <li className=" max-md:py-4 max-[420px]:py-2 py-1">2.) Whisky: Raise your glass to amber sunsets. Our whisky library boasts single malts, bourbons, and rare blends. Sip slowly, let the flavors unfold – vanilla, oak, and a hint of smokiness. Join us for tastings, where every drop has a story to tell.</li>
-            <li className=" max-md:py-4 max-[420px]:py-2 py-1">3.) Art: Our walls breathe with creativity. Local artists adorn our space with their masterpieces – abstract strokes, vivid landscapes, and sculptures that provoke thought. Art and cigars share a soul – both ignite emotions and invite contemplation.</li>
-            <li className=" max-md:py-4 max-[420px]:py-2 py-1 pb-5">4.) Events: We orchestrate soirées that linger in memory. Picture candlelit terraces, jazz notes, and laughter. Our events blend cigars, whiskey, and art seamlessly. Whether it&apos;s a gallery opening, a private tasting, or a charity auction, we create experiences that transcend time.</li>
+            <li className=" max-md:py-4 max-[420px]:py-2 py-1">2.) Whisky: Raise your glass to amber sunsets. Our whisky library boasts single malts, bourbons, and rare blends. Sip slowly, let the flavors unfold  vanilla, oak, and a hint of smokiness. Join us for tastings, where every drop has a story to tell.</li>
+            <li className=" max-md:py-4 max-[420px]:py-2 py-1">3.) Art: Our walls breathe with creativity. Local artists adorn our space with their masterpieces  abstract strokes, vivid landscapes, and sculptures that provoke thought. Art and cigars share a soul – both ignite emotions and invite contemplation.</li>
+            <li className=" max-md:py-4 max-[420px]:py-2 py-1 pb-5">4.) Events: We orchestrate soirées that linger in memory. Picture candlelit terraces, jazz notes, and laughter. Our events blend cigars, whisky, and art seamlessly. Whether it&apos;s a gallery opening, a private tasting, or a charity auction, we create experiences that transcend time.</li>
           </ul>
 
           </article>

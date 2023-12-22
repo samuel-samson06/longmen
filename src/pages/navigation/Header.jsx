@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom"
 import {RxHamburgerMenu} from "react-icons/rx"
 import logo from "../../long_men_images/longMenLogoCropped2.png"
-import { useState } from "react"
+import { useContext } from "react"
+import { Context } from "../../contexts/ContextFile";
 
 function Header() {
-  const [navBarTrigger, setNavBarTrigger] = useState(false);
+  // const [navBarTrigger, setNavBarTrigger] = useState(false);
+  const {navBarTrigger,setNavBarTrigger}=useContext(Context)
   function handleVerticalNavigation(){
     setNavBarTrigger(!navBarTrigger)
     // alert(navBarTrigger)
