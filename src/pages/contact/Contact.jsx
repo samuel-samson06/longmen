@@ -1,6 +1,7 @@
 import {BsInstagram} from "react-icons/bs"
 import { BiSolidPhoneCall} from "react-icons/bi"
 import {HiOutlineMail} from "react-icons/hi"
+import {FaWhatsapp} from "react-icons/fa6";
 import { useContext, useEffect, useRef, useState } from "react"
 import { Context } from "../../contexts/ContextFile"
 // import { useNavigate } from "react-router-dom"
@@ -87,6 +88,7 @@ function Contact() {
                   <div className=" flex items-center gap-5">
                     <p className=" max-[420px]:text-lg text-xl font-semibold py-3">Socials:</p>
                     <a className=" max-[420px]:text-lg text-xl" href="https://www.instagram.com/longmenafr/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><BsInstagram/></a>
+                    <a className=" max-[420px]:text-lg text-xl" href="https://wa.link/jf3ch6"><FaWhatsapp/></a>
                   </div>
                 </div>
                 <div className=" flex items-center gap-5">
