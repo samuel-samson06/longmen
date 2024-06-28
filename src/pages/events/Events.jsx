@@ -86,11 +86,11 @@ function Events() {
       </div>
     </div>
 
-        <p className=" max-[420px]:text-base max-[420px]:px-5 font-semibold text-xl text-center py-8 max-md:text-lg">Our whiskey is distilled by masters who honor tradition. Our events are curated with meticulous care. <br />
+        <p className=" max-[420px]:text-base max-[420px]:px-5 font-semibold text-xl text-center py-8 max-md:text-lg">Our whisky is distilled by masters who honor tradition. Our events are curated with meticulous care. <br />
     Step into our world. The hum of conversation, the clink of glasses, the aroma of tobacco – it&apos;s all here. <br />At Longmen, we celebrate life&apos;s symphony.
     Cheers to the art of living!* 🥃🪘🎨🌟</p>
       </div>
-      <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 uppercase text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen cooperation &copy; {year.getFullYear()}</p>
+      <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 capitalize text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen co-operation &copy; {year.getFullYear()}</p>
     </>
   )
 }

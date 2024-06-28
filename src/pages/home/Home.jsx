@@ -28,7 +28,7 @@ function Home() {
         </div>
         <div className="  py-5">
           <p className=" max-[420px]:text-xl max-[420px]:py-1 max-md:text-2xl max-md:py-2 text-center text-3xl font-bold  py-3">Focus</p>
-          <p className=" max-[420px]:text-sm max-[420px]:py-1 max-[420px]:my-2 max-[420px]:px-3 max-md:my-2 max-md:py-2 max-md:px-5 text-center text-lg py-4 my-4 italic">At <span className=" font-bold">Longmen</span>, we celebrate the finer things in life – the art of savoring a perfectly rolled cigar, <br /> the warmth of a well-aged whisky, and the joy of shared experiences. <br /> Our passion lies in curating exceptional moments for aficionados, connoisseurs, and seekers of refined pleasures.</p>
+          <p className=" max-[420px]:text-sm max-[420px]:py-1 max-[420px]:my-2 max-[420px]:px-3 max-md:my-2 max-md:py-2 max-md:px-5 text-center text-lg py-4 my-4 ">At <span className=" font-bold">Longmen</span>, we celebrate the finer things in life – the art of savoring a perfectly rolled cigar, <br /> the warmth of a well-aged whisky, and the joy of shared experiences. <br /> Our passion lies in curating exceptional moments for aficionados, connoisseurs, and seekers of refined pleasures.</p>
           <section className=" -z-40 max-lg:gap-16 max-[420px]:gap-12 max-[420px]:justify-center  max-md:flex-col my-4 flex justify-evenly items-center">
             <main className="-z-40 rounded-md transition-all hover:text-lg relative overflow-hidden">
               <img className=" max-md:w-96 max-[420px]:w-64 w-80" src={el} alt="" />
@@ -58,7 +58,7 @@ function Home() {
           <img src={flyer} alt="Last Event" className=" max-[450px]:w-36 max-[420px]:w-40 max-md:w-72 w-96" />
         </div>
       </footer>
-      <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 uppercase text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen cooperation &copy; {year.getFullYear()}</p>
+      <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 capitalize text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen co-operation &copy; {year.getFullYear()}</p>
     </>
   )
 }

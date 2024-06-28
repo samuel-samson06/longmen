@@ -3,13 +3,13 @@ import { BiSolidPhoneCall} from "react-icons/bi"
 import {HiOutlineMail} from "react-icons/hi"
 import { useContext, useEffect, useRef, useState } from "react"
 import { Context } from "../../contexts/ContextFile"
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import emailjs from '@emailjs/browser';
 
 function Contact() {
   const year=new Date()
   const form =useRef()
-  const navigate=useNavigate()
+  // const navigate=useNavigate()
   const {navBarTrigger}=useContext(Context)
   const [info,setInfo]=useState({
     name:'',
@@ -33,13 +33,13 @@ function Contact() {
   },[borderTrigger])
 
   useEffect(function(){
-    if(name.toLowerCase()==="longmen" && message.toLowerCase()==="longmen123"){
-      setBtnText("Login")
-    }else{
+    // if(name.toLowerCase()==="longmen" && message.toLowerCase()==="longmen123"){
+    //   setBtnText("Login")
+    // }else
+    
       setBtnText("Send Message")
-    }
 
-  },[name,message])
+  },[message])
 
   function handleChange(e){
     setInfo({
@@ -51,11 +51,11 @@ function Contact() {
 
   function handleSubmit(e){
     e.preventDefault()
-    if(name.toLowerCase().trim()==="longmen" && message.toLowerCase().trim()==="longmen123" && email.length===0 && phoneNumber.length===0){
-      navigate('/admin/adminHome')
-    }else if(name.length===0 || phoneNumber.length===0 || email.length===0 || message.length===0){
+    // if(name.toLowerCase().trim()==="longmen" && message.toLowerCase().trim()==="longmen123" && email.length===0 && phoneNumber.length===0){
+    //   navigate('/admin/adminHome')
+    // }else 
+    if(name.length===0 || phoneNumber.length===0 || email.length===0 || message.length===0){
       setBorderTrigger(true)
-      // alert("message")
     }else{
       emailjs.sendForm('service_9m6o8d8', 'template_5rsmgtn', form.current, 'CdvIJoio1htO4SQuP')
       .then((result) => {
@@ -91,18 +91,18 @@ function Contact() {
                 </div>
                 <div className=" flex items-center gap-5">
                   <p className=" max-[420px]:text-lg text-xl font-semibold  py-3">Phone:</p>
-                  <a href="tel:+08106407130" className=" border-b-[1px] max-[420px]:text-sm text-white px-2 py-1  font-bold flex items-center gap-2 "><span>Place a call</span><BiSolidPhoneCall  className="text-lg"/></a>
+                  <a href="tel:+07010815506" className=" border-b-[1px] max-[420px]:text-sm text-white px-2 py-1  font-bold flex items-center gap-2 "><span>Place a call</span><BiSolidPhoneCall  className="text-lg"/></a>
                 </div>
                 <div className="flex items-center gap-5">
                   <p className=" max-[420px]:text-lg text-xl font-semibold  py-3">Email:</p>
-                  <a href="mailto:a.samuelsamson@gmail.com" className="border-b-[1px] max-[420px]:text-sm text-white px-2 py-1  font-bold flex items-center gap-2 "><span>Send Us A Direct Mail</span>{<HiOutlineMail/>}</a>
+                  <a href="mailto:Okaforlotanna@gmail.com" className="border-b-[1px] max-[420px]:text-sm text-white px-2 py-1  font-bold flex items-center gap-2 "><span>Send Us A Direct Mail</span>{<HiOutlineMail/>}</a>
                 </div>
               </section>
             </div>
           </main>
         </div>
         <div>
-          <p className=" max-[420px]:text-base max-[420px]:py-3 text-center font-serif font-semibold text-xl py-3 underline">Send us a message by filling the form</p>
+          <p className=" max-[420px]:text-base max-[420px]:py-3 text-center font-serif font-semibold text-xl py-3 capitalize underline">Send A Direct Mail</p>
           <form action="" ref={form} className="  bg-gray-200 py-5 px-4 max-[420px]:mx-4 max-[420px]:my-5 mx-8 my-10 flex flex-col gap-6 rounded-md ">
             <input onChange={handleChange} value={name} type="text" name="name"  className={`  py-2 px-2 mx-3 placeholder:font-semibold placeholder:text-gray-400 placeholder:text-opacity-70 outline-none bg-gray-200 border-b-2  ${borderTrigger&&name.length<=0?"border-red-500":'border-black'}`} placeholder="Your Name" />
             <input onChange={handleChange} value={phoneNumber} type="tel" name="phoneNumber"  className={`  py-2 px-2 mx-3 placeholder:font-semibold placeholder:text-gray-400 placeholder:text-opacity-70 outline-none bg-gray-200 border-b-2  ${borderTrigger&&phoneNumber.length<=0?"border-red-500":'border-black'}`} placeholder="Your phone number" />
@@ -113,7 +113,7 @@ function Contact() {
             </div>
           </form>
         </div>
-      <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 uppercase text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen cooperation &copy; {year.getFullYear()}</p>
+        <p className=" max-[420px]:font-medium max-[420px]:text-[12px] max-[420px]:py-3 max-[420px]:px-3 py-2 capitalize text-center text-white bg-gray-700 font-semibold">All Rights Reserved | A longmen co-operation &copy; {year.getFullYear()}</p>
       </div>
     </>
   )
